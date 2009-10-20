@@ -2,11 +2,11 @@
 
 == Math Sets ==
 
- === Let's say you have a universe (U) set: ===
+=== Let's say you have a universe (U) set: ===
 
   * U = {a,b,c,d,e,f,g,h,k,l,m,n,o,p,q,r,s,t,u,v,x,y,w,z}
 
- === And the content of each element of U set are: ===
+=== And the content of each element of U set are: ===
 
   * a = {b,c}	
   * b = {d,e}	
@@ -35,6 +35,49 @@
   * w = {}
   * z = {} 
 
- === The JavaDiagram API, converts the U set into an array and then creates a hierarchical block-diagram that represents the universe set. This diagram will be a .png file and will looks like: ===
+=== The JavaDiagram API, converts the U set into an array and then creates a hierarchical block-diagram that represents the universe set. This diagram will be a .png file and will looks like: ===
 
 http://javadiagram.googlecode.com/files/universe_set.png
+
+=== To create this result the code is really simple: ===
+
+{{{
+private String stringSet =	"a = {b,c}	" +
+	"b = {d,e}	" +
+	"c = {p}	" +
+	"d = {}		" +
+	"e = {f,g,h}		" +
+	"f = {k,l,m,n,o}" +
+	"g = {q,r}" +
+	"h = {i,j}" +
+	"i = {}" +
+	"j = {t,u,v}" +
+	"k = {w,z}" +
+	"l = {s}" +
+	"m = {}" +
+	"n = {}" +
+	"o = {}" +
+	"p = {}  	" +
+	"q = {x,y}" +
+	"r = {}" +
+	"s = {}" +
+	"t = {}" +
+	"u = {}" +
+	"v = {}" +
+	"x = {}" +
+	"y = {} " +
+	"w = {}" +
+	"z = {}";
+	
+	public void testConvert(){
+		StructureCreator sc = new StructureCreator();
+		ArrayList<RetanguleBox> retArray = sc.convert(stringSet);
+		
+		for(int i=0; i<retArray.size(); i++){
+			System.out.println("caption: "+retArray.get(i).getCaption()+" id: "+retArray.get(i).getId()+" source: "+retArray.get(i).getSource()+" row: "+retArray.get(i).getRow()+" col: "+retArray.get(i).getCol());
+		}
+		
+		DiagramCreator dc = new DiagramCreator("/tmp/test2.png");
+		dc.design(retArray);
+	}
+}}}
