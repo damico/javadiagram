@@ -2,37 +2,39 @@
 
 == Math Sets ==
 
- # Let's say you have a universe (U) set:
+ * Let's say you have a universe (U) set:
 
- * U = {a,b,c,d,e,f,g,h,k,l,m,n,o,p,q,r,s,t,u,v,x,y,w,z}
+  * U = {a,b,c,d,e,f,g,h,k,l,m,n,o,p,q,r,s,t,u,v,x,y,w,z}
 
- # And the content of each element of U set are:
+ * And the content of each element of U set are:
 
- * a = {b,c}	
- * b = {d,e}	
- * c = {p}	
- * d = {}		
- * e = {f,g,h}		
- * f = {k,l,m,n,o}
- * g = {q,r}
- * h = {i,j}
- * i = {}
- * j = {t,u,v}
- * k = {w,z}
- * l = {s}
- * m = {}
- * n = {}
- * o = {}
- * p = {}  	
- * q = {x,y}
- * r = {}
- * s = {}
- * t = {}
- * u = {}
- * v = {}
- * x = {}
- * y = {} 
- * w = {}
- * z = {} 
+  * a = {b,c}	
+  * b = {d,e}	
+  * c = {p}	
+  * d = {}		
+  * e = {f,g,h}		
+  * f = {k,l,m,n,o}
+  * g = {q,r}
+  * h = {i,j}
+  * i = {}
+  * j = {t,u,v}
+  * k = {w,z}
+  * l = {s}
+  * m = {}
+  * n = {}
+  * o = {}
+  * p = {}  	
+  * q = {x,y}
+  * r = {}
+  * s = {}
+  * t = {}
+  * u = {}
+  * v = {}
+  * x = {}
+  * y = {} 
+  * w = {}
+  * z = {} 
 
- # The JavaDiagram API, converts the U set into an array and then creates a hierarchical block-diagram that represents the universe set. This diagram will be a .png file and will looks like:
+ * The JavaDiagram API, converts the U set into an array and then creates a hierarchical block-diagram that represents the universe set. This diagram will be a .png file and will looks like:
+
+http://javadiagram.googlecode.com/files/universe_set.png
